@@ -1,0 +1,1227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d78072d7-5e4c-4063-99ff-d2cdffbaa87e" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="PyTrader.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PyTrader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="569">
+              <caret line="59" column="33" lean-forward="false" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="641">
+              <caret line="169" column="32" lean-forward="true" selection-start-line="169" selection-start-column="32" selection-end-line="169" selection-end-column="32" />
+              <folding>
+                <element signature="e#4081#4110#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Kiwoom_Handle.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_Handle.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="47" column="35" lean-forward="true" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#637#833#0" expanded="false" />
+                <element signature="e#904#1064#0" expanded="false" />
+                <element signature="e#1146#1534#0" expanded="false" />
+                <element signature="e#1579#1692#0" expanded="false" />
+                <element signature="e#2109#2375#0" expanded="false" />
+                <element signature="e#2434#2698#0" expanded="false" />
+                <element signature="e#3081#3347#0" expanded="false" />
+                <element signature="e#3408#3676#0" expanded="false" />
+                <element signature="e#3739#4005#0" expanded="false" />
+                <element signature="e#4061#4293#0" expanded="false" />
+                <element signature="e#4347#4577#0" expanded="false" />
+                <element signature="e#4631#4861#0" expanded="false" />
+                <element signature="e#4916#5148#0" expanded="false" />
+                <element signature="e#5204#5428#0" expanded="false" />
+                <element signature="e#5483#5705#0" expanded="false" />
+                <element signature="e#5779#6834#0" expanded="false" />
+                <element signature="e#6890#7238#0" expanded="false" />
+                <element signature="e#7327#8126#0" expanded="false" />
+                <element signature="e#10881#10946#0" expanded="false" />
+                <element signature="e#10995#11259#0" expanded="false" />
+                <element signature="e#11314#11717#0" expanded="false" />
+                <element signature="e#11759#13105#0" expanded="false" />
+                <element signature="e#13149#14097#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Kiwoom_API.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_API.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="314" column="25" lean-forward="false" selection-start-line="314" selection-start-column="25" selection-end-line="314" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogStringHandler.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Log/LogStringHandler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>예수금</find>
+      <find>_qTable</find>
+      <find>rbtnTradeTypeTotal_2</find>
+      <find>현금미수</find>
+      <find>_self</find>
+      <find>accNumger</find>
+      <find>self.tbOderHist_1</find>
+      <find>정정</find>
+      <find>leditAccPW</find>
+      <find>75</find>
+      <find>opw00007_req</find>
+      <find>master</find>
+      <find>v</find>
+      <find>Chart</find>
+      <find>GetMasterCodeName</find>
+      <find>cboxAccInManage</find>
+      <find>''</find>
+      <find>YYmmdd</find>
+      <find>datetime</find>
+      <find>'</find>
+      <find>pyupbit</find>
+      <find>hlChart</find>
+      <find>ax</find>
+      <find>self.kiwoom.ohlcv</find>
+      <find>.ohlcv</find>
+      <find>leCodeInChart</find>
+      <find>opt10007</find>
+      <find>opt10004</find>
+      <find>callBuyPrice2</find>
+      <find>callSellNum5</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>_CommGetData</replace>
+      <replace>totalLoan</replace>
+      <replace>totalLoanAmount</replace>
+      <replace>numberOfRequest</replace>
+      <replace>opw00018Output</replace>
+      <replace>profit</replace>
+      <replace>profitRate</replace>
+      <replace>tbNoSigned</replace>
+      <replace>tbDeposit_1</replace>
+      <replace>_accNumber</replace>
+      <replace>_self.tbOderHist_1</replace>
+      <replace>self</replace>
+      <replace>accNumber</replace>
+      <replace>_qTable</replace>
+      <replace>_dfData</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Security_Company/Kiwoom_Handler.py" />
+        <option value="$PROJECT_DIR$/Log/LogStringHandler.py" />
+        <option value="$PROJECT_DIR$/test_.py" />
+        <option value="$PROJECT_DIR$/PyTrader.py" />
+        <option value="$PROJECT_DIR$/Security_Company/Kiwoom_Handle.py" />
+        <option value="$PROJECT_DIR$/Security_Company/Kiwoom_API.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTrading_20211121" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTrading_20211121" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTrading_20211121" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTrading_20211121" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTrading_20211121" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTrading_20211121" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Security_Company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTrading_20211121" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTrading_20211121" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Log" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="C:/Program Files/pmdtechnologies_ag/pmd_Calibration_and_Validation_Software_v4.5.1/envs/pmd_env/Scripts/python.exe" />
+  </component>
+  <component name="RunManager" selected="Python.PyTrader">
+    <configuration default="false" name="Kiwoom_API" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Security_Company" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="MyTrading_20211121" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Security_Company/Kiwoom_API.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Kiwoom_Handle" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Security_Company" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="MyTrading_20211121" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Security_Company/Kiwoom_Handle.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="PyTrader" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="MyTrading_20211121" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyTrader.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test_" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="MyTrading_20211121" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="MyTrading_20211121" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="MyTrading_20211121" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="MyTrading_20211121" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="MyTrading_20211121" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="MyTrading_20211121" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="MyTrading_20211121" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="MyTrading_20211121" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Python.Kiwoom_API" />
+      <item index="1" class="java.lang.String" itemvalue="Python.Kiwoom_Handle" />
+      <item index="2" class="java.lang.String" itemvalue="Python.PyTrader" />
+      <item index="3" class="java.lang.String" itemvalue="Python.test_" />
+    </list>
+    <recent_temporary>
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.PyTrader" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test_" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Kiwoom_Handle" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Kiwoom_API" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d78072d7-5e4c-4063-99ff-d2cdffbaa87e" name="Default" comment="" />
+      <created>1637478628916</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637478628916</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17239584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3562368" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Security_Company/Kiwoom_API.py</url>
+          <line>712</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Security_Company/Kiwoom_API.py</url>
+          <line>567</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PyTrader.py</url>
+          <line>188</line>
+          <option name="timeStamp" value="169" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Security_Company/Kiwoom_API.py</url>
+          <line>382</line>
+          <option name="timeStamp" value="171" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Security_Company/Kiwoom_Handle.py</url>
+          <line>134</line>
+          <option name="timeStamp" value="175" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_.py</url>
+          <line>164</line>
+          <option name="timeStamp" value="198" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Security_Company/Kiwoom_Handle.py</url>
+          <line>57</line>
+          <option name="timeStamp" value="200" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Security_Company/Kiwoom_API.py</url>
+          <line>364</line>
+          <option name="timeStamp" value="202" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="203" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="self._CommGetData(trcode, &quot;&quot;, rqname, 0, &quot;매수1호가&quot;)" language="Python" />
+        <watch expression="self._CommGetData(trcode, &quot;&quot;, rqname, 0, &quot;등락률&quot;)" language="Python" />
+        <watch expression="self._CommGetData(trcode, &quot;&quot;, rqname, 0, &quot;행사가격&quot;)" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/PyTrader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_Handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="69" column="18" lean-forward="false" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#637#833#0" expanded="false" />
+            <element signature="e#904#1064#0" expanded="false" />
+            <element signature="e#1146#1534#0" expanded="false" />
+            <element signature="e#1579#1692#0" expanded="false" />
+            <element signature="e#2109#2375#0" expanded="false" />
+            <element signature="e#2434#2698#0" expanded="false" />
+            <element signature="e#3081#3347#0" expanded="false" />
+            <element signature="e#3408#3676#0" expanded="false" />
+            <element signature="e#3739#4005#0" expanded="false" />
+            <element signature="e#4061#4293#0" expanded="false" />
+            <element signature="e#4347#4577#0" expanded="false" />
+            <element signature="e#4631#4861#0" expanded="false" />
+            <element signature="e#4916#5148#0" expanded="false" />
+            <element signature="e#5204#5428#0" expanded="false" />
+            <element signature="e#5483#5705#0" expanded="false" />
+            <element signature="e#5779#6834#0" expanded="false" />
+            <element signature="e#6890#7238#0" expanded="false" />
+            <element signature="e#7327#8126#0" expanded="false" />
+            <element signature="e#10881#10946#0" expanded="false" />
+            <element signature="e#10995#11259#0" expanded="false" />
+            <element signature="e#11314#11717#0" expanded="false" />
+            <element signature="e#11759#13105#0" expanded="false" />
+            <element signature="e#13149#14097#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_API.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7056">
+          <caret line="294" column="32" lean-forward="false" selection-start-line="294" selection-start-column="30" selection-end-line="294" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Log/LogStringHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PyTrader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_API.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6864">
+          <caret line="286" column="27" lean-forward="false" selection-start-line="286" selection-start-column="13" selection-end-line="286" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_Handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3216">
+          <caret line="142" column="66" lean-forward="false" selection-start-line="142" selection-start-column="66" selection-end-line="142" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#637#833#0" expanded="false" />
+            <element signature="e#904#1064#0" expanded="false" />
+            <element signature="e#1146#1534#0" expanded="false" />
+            <element signature="e#1579#1692#0" expanded="false" />
+            <element signature="e#2109#2375#0" expanded="false" />
+            <element signature="e#2434#2698#0" expanded="false" />
+            <element signature="e#3081#3347#0" expanded="false" />
+            <element signature="e#3408#3676#0" expanded="false" />
+            <element signature="e#3739#4005#0" expanded="false" />
+            <element signature="e#4061#4293#0" expanded="false" />
+            <element signature="e#4347#4577#0" expanded="false" />
+            <element signature="e#4631#4861#0" expanded="false" />
+            <element signature="e#4916#5148#0" expanded="false" />
+            <element signature="e#5204#5428#0" expanded="false" />
+            <element signature="e#5483#5705#0" expanded="false" />
+            <element signature="e#5779#6834#0" expanded="false" />
+            <element signature="e#6890#7238#0" expanded="false" />
+            <element signature="e#7327#8126#0" expanded="false" />
+            <element signature="e#10881#10946#0" expanded="false" />
+            <element signature="e#10995#11259#0" expanded="false" />
+            <element signature="e#11314#11717#0" expanded="false" />
+            <element signature="e#11759#13105#0" expanded="false" />
+            <element signature="e#13149#14097#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Log/LogStringHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PyTrader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_API.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6864">
+          <caret line="286" column="27" lean-forward="false" selection-start-line="286" selection-start-column="13" selection-end-line="286" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_Handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3216">
+          <caret line="142" column="66" lean-forward="false" selection-start-line="142" selection-start-column="66" selection-end-line="142" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#637#833#0" expanded="false" />
+            <element signature="e#904#1064#0" expanded="false" />
+            <element signature="e#1146#1534#0" expanded="false" />
+            <element signature="e#1579#1692#0" expanded="false" />
+            <element signature="e#2109#2375#0" expanded="false" />
+            <element signature="e#2434#2698#0" expanded="false" />
+            <element signature="e#3081#3347#0" expanded="false" />
+            <element signature="e#3408#3676#0" expanded="false" />
+            <element signature="e#3739#4005#0" expanded="false" />
+            <element signature="e#4061#4293#0" expanded="false" />
+            <element signature="e#4347#4577#0" expanded="false" />
+            <element signature="e#4631#4861#0" expanded="false" />
+            <element signature="e#4916#5148#0" expanded="false" />
+            <element signature="e#5204#5428#0" expanded="false" />
+            <element signature="e#5483#5705#0" expanded="false" />
+            <element signature="e#5779#6834#0" expanded="false" />
+            <element signature="e#6890#7238#0" expanded="false" />
+            <element signature="e#7327#8126#0" expanded="false" />
+            <element signature="e#10881#10946#0" expanded="false" />
+            <element signature="e#10995#11259#0" expanded="false" />
+            <element signature="e#11314#11717#0" expanded="false" />
+            <element signature="e#11759#13105#0" expanded="false" />
+            <element signature="e#13149#14097#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Log/LogStringHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PyTrader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_API.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1104">
+          <caret line="46" column="36" lean-forward="false" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_Handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="39" column="38" lean-forward="true" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#637#833#0" expanded="false" />
+            <element signature="e#904#1064#0" expanded="false" />
+            <element signature="e#1146#1534#0" expanded="false" />
+            <element signature="e#1579#1692#0" expanded="false" />
+            <element signature="e#2109#2375#0" expanded="false" />
+            <element signature="e#2434#2698#0" expanded="false" />
+            <element signature="e#3081#3347#0" expanded="false" />
+            <element signature="e#3408#3676#0" expanded="false" />
+            <element signature="e#3739#4005#0" expanded="false" />
+            <element signature="e#4061#4293#0" expanded="false" />
+            <element signature="e#4347#4577#0" expanded="false" />
+            <element signature="e#4631#4861#0" expanded="false" />
+            <element signature="e#4916#5148#0" expanded="false" />
+            <element signature="e#5204#5428#0" expanded="false" />
+            <element signature="e#5483#5705#0" expanded="false" />
+            <element signature="e#5779#6834#0" expanded="false" />
+            <element signature="e#6890#7238#0" expanded="false" />
+            <element signature="e#7327#8126#0" expanded="false" />
+            <element signature="e#10881#10946#0" expanded="false" />
+            <element signature="e#10995#11259#0" expanded="false" />
+            <element signature="e#11314#11717#0" expanded="false" />
+            <element signature="e#11759#13105#0" expanded="false" />
+            <element signature="e#13149#14097#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Log/LogStringHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PyTrader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_API.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9120">
+          <caret line="380" column="65" lean-forward="true" selection-start-line="380" selection-start-column="65" selection-end-line="380" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_Handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="43" column="51" lean-forward="false" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#637#833#0" expanded="false" />
+            <element signature="e#904#1064#0" expanded="false" />
+            <element signature="e#1146#1534#0" expanded="false" />
+            <element signature="e#1579#1692#0" expanded="false" />
+            <element signature="e#2109#2375#0" expanded="false" />
+            <element signature="e#2434#2698#0" expanded="false" />
+            <element signature="e#3081#3347#0" expanded="false" />
+            <element signature="e#3408#3676#0" expanded="false" />
+            <element signature="e#3739#4005#0" expanded="false" />
+            <element signature="e#4061#4293#0" expanded="false" />
+            <element signature="e#4347#4577#0" expanded="false" />
+            <element signature="e#4631#4861#0" expanded="false" />
+            <element signature="e#4916#5148#0" expanded="false" />
+            <element signature="e#5204#5428#0" expanded="false" />
+            <element signature="e#5483#5705#0" expanded="false" />
+            <element signature="e#5779#6834#0" expanded="false" />
+            <element signature="e#6890#7238#0" expanded="false" />
+            <element signature="e#7327#8126#0" expanded="false" />
+            <element signature="e#10881#10946#0" expanded="false" />
+            <element signature="e#10995#11259#0" expanded="false" />
+            <element signature="e#11314#11717#0" expanded="false" />
+            <element signature="e#11759#13105#0" expanded="false" />
+            <element signature="e#13149#14097#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Log/LogStringHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_API.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_Handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5400">
+          <caret line="273" column="45" lean-forward="false" selection-start-line="273" selection-start-column="45" selection-end-line="273" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#637#833#0" expanded="false" />
+            <element signature="e#904#1064#0" expanded="false" />
+            <element signature="e#1146#1534#0" expanded="false" />
+            <element signature="e#1579#1692#0" expanded="false" />
+            <element signature="e#2109#2375#0" expanded="false" />
+            <element signature="e#2434#2698#0" expanded="false" />
+            <element signature="e#3081#3347#0" expanded="false" />
+            <element signature="e#3408#3676#0" expanded="false" />
+            <element signature="e#3739#4005#0" expanded="false" />
+            <element signature="e#4061#4293#0" expanded="false" />
+            <element signature="e#4347#4577#0" expanded="false" />
+            <element signature="e#4631#4861#0" expanded="false" />
+            <element signature="e#4916#5148#0" expanded="false" />
+            <element signature="e#5204#5428#0" expanded="false" />
+            <element signature="e#5483#5705#0" expanded="false" />
+            <element signature="e#5779#6834#0" expanded="false" />
+            <element signature="e#6890#7238#0" expanded="false" />
+            <element signature="e#7327#8126#0" expanded="false" />
+            <element signature="e#10881#10946#0" expanded="false" />
+            <element signature="e#10995#11259#0" expanded="false" />
+            <element signature="e#11314#11717#0" expanded="false" />
+            <element signature="e#11759#13105#0" expanded="false" />
+            <element signature="e#13149#14097#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PyTrader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_API.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_Handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5640">
+          <caret line="283" column="45" lean-forward="true" selection-start-line="283" selection-start-column="45" selection-end-line="283" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#637#833#0" expanded="false" />
+            <element signature="e#904#1064#0" expanded="false" />
+            <element signature="e#1146#1534#0" expanded="false" />
+            <element signature="e#1579#1692#0" expanded="false" />
+            <element signature="e#2109#2375#0" expanded="false" />
+            <element signature="e#2434#2698#0" expanded="false" />
+            <element signature="e#3081#3347#0" expanded="false" />
+            <element signature="e#3408#3676#0" expanded="false" />
+            <element signature="e#3739#4005#0" expanded="false" />
+            <element signature="e#4061#4293#0" expanded="false" />
+            <element signature="e#4347#4577#0" expanded="false" />
+            <element signature="e#4631#4861#0" expanded="false" />
+            <element signature="e#4916#5148#0" expanded="false" />
+            <element signature="e#5204#5428#0" expanded="false" />
+            <element signature="e#5483#5705#0" expanded="false" />
+            <element signature="e#5779#6834#0" expanded="false" />
+            <element signature="e#6890#7238#0" expanded="false" />
+            <element signature="e#7327#8126#0" expanded="false" />
+            <element signature="e#10881#10946#0" expanded="false" />
+            <element signature="e#10995#11259#0" expanded="false" />
+            <element signature="e#11314#11717#0" expanded="false" />
+            <element signature="e#11759#13105#0" expanded="false" />
+            <element signature="e#13149#14097#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_API.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2424">
+          <caret line="101" column="102" lean-forward="true" selection-start-line="101" selection-start-column="8" selection-end-line="101" selection-end-column="102" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_Handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#637#833#0" expanded="false" />
+            <element signature="e#904#1064#0" expanded="false" />
+            <element signature="e#1146#1534#0" expanded="false" />
+            <element signature="e#1579#1692#0" expanded="false" />
+            <element signature="e#2109#2375#0" expanded="false" />
+            <element signature="e#2434#2698#0" expanded="false" />
+            <element signature="e#3081#3347#0" expanded="false" />
+            <element signature="e#3408#3676#0" expanded="false" />
+            <element signature="e#3739#4005#0" expanded="false" />
+            <element signature="e#4061#4293#0" expanded="false" />
+            <element signature="e#4347#4577#0" expanded="false" />
+            <element signature="e#4631#4861#0" expanded="false" />
+            <element signature="e#4916#5148#0" expanded="false" />
+            <element signature="e#5204#5428#0" expanded="false" />
+            <element signature="e#5483#5705#0" expanded="false" />
+            <element signature="e#5779#6834#0" expanded="false" />
+            <element signature="e#6890#7238#0" expanded="false" />
+            <element signature="e#7327#8126#0" expanded="false" />
+            <element signature="e#10881#10946#0" expanded="false" />
+            <element signature="e#10995#11259#0" expanded="false" />
+            <element signature="e#11314#11717#0" expanded="false" />
+            <element signature="e#11759#13105#0" expanded="false" />
+            <element signature="e#13149#14097#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Anaconda3_201812_x86/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7392">
+          <caret line="309" column="0" lean-forward="false" selection-start-line="309" selection-start-column="0" selection-end-line="309" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_API.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7512">
+          <caret line="313" column="0" lean-forward="true" selection-start-line="313" selection-start-column="0" selection-end-line="313" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_Handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#637#833#0" expanded="false" />
+            <element signature="e#904#1064#0" expanded="false" />
+            <element signature="e#1146#1534#0" expanded="false" />
+            <element signature="e#1579#1692#0" expanded="false" />
+            <element signature="e#2109#2375#0" expanded="false" />
+            <element signature="e#2434#2698#0" expanded="false" />
+            <element signature="e#3081#3347#0" expanded="false" />
+            <element signature="e#3408#3676#0" expanded="false" />
+            <element signature="e#3739#4005#0" expanded="false" />
+            <element signature="e#4061#4293#0" expanded="false" />
+            <element signature="e#4347#4577#0" expanded="false" />
+            <element signature="e#4631#4861#0" expanded="false" />
+            <element signature="e#4916#5148#0" expanded="false" />
+            <element signature="e#5204#5428#0" expanded="false" />
+            <element signature="e#5483#5705#0" expanded="false" />
+            <element signature="e#5779#6834#0" expanded="false" />
+            <element signature="e#6890#7238#0" expanded="false" />
+            <element signature="e#7327#8126#0" expanded="false" />
+            <element signature="e#10881#10946#0" expanded="false" />
+            <element signature="e#10995#11259#0" expanded="false" />
+            <element signature="e#11314#11717#0" expanded="false" />
+            <element signature="e#11759#13105#0" expanded="false" />
+            <element signature="e#13149#14097#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_API.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2016.3/system/python_stubs/-1077038493/PyQt5/QtCore/QEventLoop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="31" column="8" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_API.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_API.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydevd_bundle/pydevd_exec2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2016.3/system/python_stubs/-1077038493/PyQt5/QtCore/QEventLoop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="31" column="8" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2016.3/system/python_stubs/-2146817210/PyQt5/QAxContainer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="45" column="8" lean-forward="false" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Anaconda3_201812_x86/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="309" column="0" lean-forward="false" selection-start-line="309" selection-start-column="0" selection-end-line="309" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Stock/Stock_20210818/MyStockVenv_x86/Lib/site-packages/pandas/compat/_optional.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="132" column="12" lean-forward="false" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Stock/Stock_20210818/MyStockVenv_x86/Lib/site-packages/numpy/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2016.3/system/python_stubs/-2146817210/PyQt5/QtCore/QDate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Log/LogStringHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="641">
+          <caret line="169" column="32" lean-forward="true" selection-start-line="169" selection-start-column="32" selection-end-line="169" selection-end-column="32" />
+          <folding>
+            <element signature="e#4081#4110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PyTrader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="59" column="33" lean-forward="false" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_Handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="47" column="35" lean-forward="true" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#637#833#0" expanded="false" />
+            <element signature="e#904#1064#0" expanded="false" />
+            <element signature="e#1146#1534#0" expanded="false" />
+            <element signature="e#1579#1692#0" expanded="false" />
+            <element signature="e#2109#2375#0" expanded="false" />
+            <element signature="e#2434#2698#0" expanded="false" />
+            <element signature="e#3081#3347#0" expanded="false" />
+            <element signature="e#3408#3676#0" expanded="false" />
+            <element signature="e#3739#4005#0" expanded="false" />
+            <element signature="e#4061#4293#0" expanded="false" />
+            <element signature="e#4347#4577#0" expanded="false" />
+            <element signature="e#4631#4861#0" expanded="false" />
+            <element signature="e#4916#5148#0" expanded="false" />
+            <element signature="e#5204#5428#0" expanded="false" />
+            <element signature="e#5483#5705#0" expanded="false" />
+            <element signature="e#5779#6834#0" expanded="false" />
+            <element signature="e#6890#7238#0" expanded="false" />
+            <element signature="e#7327#8126#0" expanded="false" />
+            <element signature="e#10881#10946#0" expanded="false" />
+            <element signature="e#10995#11259#0" expanded="false" />
+            <element signature="e#11314#11717#0" expanded="false" />
+            <element signature="e#11759#13105#0" expanded="false" />
+            <element signature="e#13149#14097#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Security_Company/Kiwoom_API.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="314" column="25" lean-forward="false" selection-start-line="314" selection-start-column="25" selection-end-line="314" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
