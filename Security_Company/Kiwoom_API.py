@@ -230,6 +230,8 @@ class Kiwoom(QAxWidget):
             self._opt10001(rqname, trcode)
         elif rqname == "opt10004_req":  # 주식기본정보요청
             self._opt10004(rqname, trcode)
+        elif rqname == "opt10007_req":  # 시세표성정보요청
+            self._opt10007(rqname, trcode)
         elif rqname == "opt10075_req":  # 미체결요청
             self._opt10075(rqname, trcode)
         elif rqname == "opt10076_req":  # 체결요청
@@ -252,25 +254,129 @@ class Kiwoom(QAxWidget):
             self.tr_event_loop.exit()
         except AttributeError:
             pass
+    def _opt10007(self, rqname, trcode):
+        self.opt10007Output = pd.DataFrame(columns=['호가','잔량','비고'])
+        # yTradeAmount = self._CommGetData(trcode, "", rqname, 0, "전일거래대금")
+        # stockNum = self._CommGetData(trcode, "", rqname, 0, "상장주식수")
+        # price = self._CommGetData(trcode, "", rqname, 0, "현재가")
+        # sign = self._CommGetData(trcode, "", rqname, 0, "부호")
+        # flucRate = self._CommGetData(trcode, "", rqname, 0, "등락률")
+        # signedVol = self._CommGetData(trcode, "", rqname, 0, "체결량")
+        # signedAmount = self._CommGetData(trcode, "", rqname, 0, "거래대금")
+        # expectSellPrice = self._CommGetData(trcode, "", rqname, 0, "예상매도우선호가")
+        # expectBuyPrice = self._CommGetData(trcode, "", rqname, 0, "예상매수우선호가")
+        # tradeStartDate = self._CommGetData(trcode, "", rqname, 0, "거래시작일")
+        # eventPice = self._CommGetData(trcode, "", rqname, 0, "행사가격")
+        # highestPrice = self._CommGetData(trcode, "", rqname, 0, "최고가")
+        # lowestPrice = self._CommGetData(trcode, "", rqname, 0, "최저가")
+        # highestDate = self._CommGetData(trcode, "", rqname, 0, "최고가일")
+        # lowestDate = self._CommGetData(trcode, "", rqname, 0, "최저가일")
+        # callSellPrev1 = self._CommGetData(trcode, "", rqname, 0, "매도1호가직전대비")
+        # callBuyPrev1 = self._CommGetData(trcode, "", rqname, 0, "매수1호가직전대비")
+        # callSellNum1 = self._CommGetData(trcode, "", rqname, 0, "매도1호가건수")
+        # callBuyNum1 = self._CommGetData(trcode, "", rqname, 0, "매수1호가건수")
+        # totalBuyNum = self._CommGetData(trcode, "", rqname, 0, "총매수건수")
+        # totalSellNum = self._CommGetData(trcode, "", rqname, 0, "총매도건수")
 
+        date                = self._CommGetData(trcode, "", rqname, 0, "날짜")
+        time                = self._CommGetData(trcode, "", rqname, 0, "시간")
+        company             = self._CommGetData(trcode, "", rqname, 0, "종목명")
+        code                = self._CommGetData(trcode, "", rqname, 0, "종목코드")
+        expectPrice         = abs(int(self._CommGetData(trcode, "", rqname, 0, "예상체결가")))
+        expectVolume        = abs(int(self._CommGetData(trcode, "", rqname, 0, "예상체결량")))
+        yVolume             = abs(int(self._CommGetData(trcode, "", rqname, 0, "전일거래량")))
+        volume              = abs(int(self._CommGetData(trcode, "", rqname, 0, "거래량")))
+        yPrice              = abs(int(self._CommGetData(trcode, "", rqname, 0, "전일종가")))   # 기준가
+        # 예상등락률 = (전일종가-예상체결가)/전일종가*100
+        expectFlucRatio     = (yPrice - expectPrice) / yPrice * 100
+        _open                = abs(int(self._CommGetData(trcode, "", rqname, 0, "시가")))
+        _high                = abs(int(self._CommGetData(trcode, "", rqname, 0, "고가")))
+        _low                 = abs(int(self._CommGetData(trcode, "", rqname, 0, "저가")))
+        upperPrice          = abs(int(self._CommGetData(trcode, "", rqname, 0, "상한가")))
+        lowerPrice          = abs(int(self._CommGetData(trcode, "", rqname, 0, "하한가")))
+        callSellPrice = []
+        callBuyPrice = []
+        callSellRemain = []
+        callBuyRemain = []
+        for i in range(10):
+            callSellPrice.append(abs(int(self._CommGetData(trcode, "", rqname, 0, f"매도{i+1}호가"))))
+            callBuyPrice.append(abs(int(self._CommGetData(trcode, "", rqname, 0, f"매수{i+1}호가"))))
+            callSellRemain.append(abs(int(self._CommGetData(trcode, "", rqname, 0, f"매도{i+1}호가잔량"))))
+            callBuyRemain.append(abs(int(self._CommGetData(trcode, "", rqname, 0, f"매수{i+1}호가잔량"))))
+        totalBuyRemain      = abs(int(self._CommGetData(trcode, "", rqname, 0, "총매수잔량")))
+        totalSellRemain     = abs(int(self._CommGetData(trcode, "", rqname, 0, "총매도잔량")))
+        # self.opt10007Output.loc[0] = ['잔량', '호가', '비고']  # date
+        self.opt10007Output.loc[0] = ['매도가', '매도가','매도가']
+        # self.opt10007Output.loc[1] = [callSellRemain[9], callSellPrice[9], f'날짜 : {date}']   # date
+        # self.opt10007Output.loc[2] = [callSellRemain[8], callSellPrice[8], f'시간 : {time}']   # time
+        # self.opt10007Output.loc[3] = [callSellRemain[7], callSellPrice[7], f'예상등락률 : {expectFlucRatio:.2f}']   # expectFlucRatio
+        # self.opt10007Output.loc[4] = [callSellRemain[6], callSellPrice[6], f'예상가격 : {expectPrice}']   # expectPrice
+        # self.opt10007Output.loc[5] = [callSellRemain[5], callSellPrice[5], f'예상체결량 : {expectVolume}']   # expectVolume
+        # self.opt10007Output.loc[6] = [callSellRemain[4], callSellPrice[4], f'전일거래량 : {yVolume}']   # yVolume
+        # self.opt10007Output.loc[7] = [callSellRemain[3], callSellPrice[3], f'']   # volume
+        # self.opt10007Output.loc[8] = [callSellRemain[2], callSellPrice[2], f'']   # yPrice
+        # self.opt10007Output.loc[9] = [callSellRemain[1], callSellPrice[1], f'']   # open
+        # self.opt10007Output.loc[10] = [callSellRemain[0], callSellPrice[0], f'']   # high
+
+        self.opt10007Output.loc[1] = [callSellPrice[9] ,callSellRemain[9], f'날짜 : {date}']  # date
+        self.opt10007Output.loc[2] = [callSellPrice[8] ,callSellRemain[8], f'시간 : {time}']  # time
+        self.opt10007Output.loc[3] = [callSellPrice[7] ,callSellRemain[7], f'예상등락률 : {expectFlucRatio:.2f}']  # expectFlucRatio
+        self.opt10007Output.loc[4] = [callSellPrice[6] ,callSellRemain[6], f'예상가격 : {expectPrice}']  # expectPrice
+        self.opt10007Output.loc[5] = [callSellPrice[5] ,callSellRemain[5], f'예상체결량 : {expectVolume}']  # expectVolume
+        self.opt10007Output.loc[6] = [callSellPrice[4] ,callSellRemain[4], f'전일거래량 : {yVolume}']  # yVolume
+        self.opt10007Output.loc[7] = [callSellPrice[3] ,callSellRemain[3], f'']  # volume
+        self.opt10007Output.loc[8] = [callSellPrice[2] ,callSellRemain[2], f'']  # yPrice
+        self.opt10007Output.loc[9] = [callSellPrice[1] ,callSellRemain[1], f'']  # open
+        self.opt10007Output.loc[10] = [callSellPrice[0], callSellRemain[0], f'']  # high
+        # self.opt10007Output.loc[11] = ['비고', '호가', '잔량']
+        self.opt10007Output.loc[11] = ['매수가','매수가','매수가']
+        # self.opt10007Output.loc[12] = [f'거래량 : {volume}', callBuyPrice[0], callBuyRemain[0]]   # low
+        # self.opt10007Output.loc[13] = [f'기준가 : {yPrice}', callBuyPrice[1], callBuyRemain[1], ]   # upperPrice
+        # self.opt10007Output.loc[14] = [f'시가 : {_open}', callBuyPrice[2], callBuyRemain[2], ]   # lowerPrice
+        # self.opt10007Output.loc[15] = [f'고가 : {_high}', callBuyPrice[3], callBuyRemain[3], ]   #
+        # self.opt10007Output.loc[16] = [f'저가 : {_low}', callBuyPrice[4], callBuyRemain[4], ]   #
+        # self.opt10007Output.loc[17] = [f'상한가 : {upperPrice}', callBuyPrice[5], callBuyRemain[5], ]   #
+        # self.opt10007Output.loc[18] = [f'하한가 : {lowerPrice}', callBuyPrice[6], callBuyRemain[6], ]   #
+        # self.opt10007Output.loc[19] = [f'', callBuyPrice[7], callBuyRemain[7]]   #
+        # self.opt10007Output.loc[20] = [f'', callBuyPrice[8], callBuyRemain[8]]   #
+        # self.opt10007Output.loc[21] = [f'', callBuyPrice[9], callBuyRemain[9]]   #
+
+        self.opt10007Output.loc[12] = [callBuyPrice[0], callBuyRemain[0], f'거래량 : {volume}']  # low
+        self.opt10007Output.loc[13] = [callBuyPrice[1], callBuyRemain[1], f'기준가 : {yPrice}' ]  # upperPrice
+        self.opt10007Output.loc[14] = [callBuyPrice[2], callBuyRemain[2], f'시가 : {_open}']  # lowerPrice
+        self.opt10007Output.loc[15] = [callBuyPrice[3], callBuyRemain[3], f'고가 : {_high}']  #
+        self.opt10007Output.loc[16] = [callBuyPrice[4], callBuyRemain[4], f'저가 : {_low}']  #
+        self.opt10007Output.loc[17] = [callBuyPrice[5], callBuyRemain[5], f'상한가 : {upperPrice}']  #
+        self.opt10007Output.loc[18] = [callBuyPrice[6], callBuyRemain[6], f'하한가 : {lowerPrice}']  #
+        self.opt10007Output.loc[19] = [callBuyPrice[7], callBuyRemain[7], f'']  #
+        self.opt10007Output.loc[20] = [callBuyPrice[8], callBuyRemain[8], f'']  #
+        self.opt10007Output.loc[21] = [callBuyPrice[9], callBuyRemain[9], f'']  #
+
+        self.opt10007Output.loc[22] = [totalSellRemain,'총잔량',totalBuyRemain]
     def _opt10076(self, rqname, trcode):
-        Data_1 = self._CommGetData(trcode, "", rqname, 0, "미체결수량")
-        Data_2 = self._CommGetData(trcode, "", rqname, 0, "당일매매수수료")
-        Data_3 = self._CommGetData(trcode, "", rqname, 0, "당일매매세금")
-        Data_4 = self._CommGetData(trcode, "", rqname, 0, "주문상태")
-        Data_5 = self._CommGetData(trcode, "", rqname, 0, "주문시간")
-        Data_6 = self._CommGetData(trcode, "", rqname, 0, "종목코드")
+        kiwoomCol = ['종목명', '주문구분', '주문량', '체결량', '주문가', '체결가', '정정/취소', '주문번호', '원주문',
+                   '매매구분','대출일','접수구분']
+        self.opt10076Output = pd.DataFrame(columns = kiwoomCol)
+        nData = self._GetRepeatCnt(trcode, rqname)
+        for i in range(nData):
+            Data_1 = self._CommGetData(trcode, "", rqname, 0, "미체결수량")
+            Data_2 = self._CommGetData(trcode, "", rqname, 0, "당일매매수수료")
+            Data_3 = self._CommGetData(trcode, "", rqname, 0, "당일매매세금")
+            Data_4 = self._CommGetData(trcode, "", rqname, 0, "주문상태")
+            Data_5 = self._CommGetData(trcode, "", rqname, 0, "주문시간")
+            Data_6 = self._CommGetData(trcode, "", rqname, 0, "종목코드")
 
-        company = self._CommGetData(trcode, "", rqname, 0, "종목명")
-        orderType = self._CommGetData(trcode, "", rqname, 0, "주문구분")
-        orderAmount = self._CommGetData(trcode, "", rqname, 0, "주문수량")
-        signedAmount = self._CommGetData(trcode, "", rqname, 0, "체결량")
-        orderPrice = self._CommGetData(trcode, "", rqname, 0, "주문가격")
-        signedPrice = self._CommGetData(trcode, "", rqname, 0, "체결가")
-        orderNum = self._CommGetData(trcode, "", rqname, 0, "주문번호")
-        oriNum = self._CommGetData(trcode, "", rqname, 0, "원주문번호")
-        tradeType = self._CommGetData(trcode, "", rqname, 0, "매매구분")
-        pass
+            company = self._CommGetData(trcode, "", rqname, 0, "종목명")
+            orderType = self._CommGetData(trcode, "", rqname, 0, "주문구분")
+            orderAmount = self._CommGetData(trcode, "", rqname, 0, "주문수량")
+            signedAmount = self._CommGetData(trcode, "", rqname, 0, "체결량")
+            orderPrice = self._CommGetData(trcode, "", rqname, 0, "주문가격")
+            signedPrice = self._CommGetData(trcode, "", rqname, 0, "체결가")
+            orderNum = self._CommGetData(trcode, "", rqname, 0, "주문번호")
+            oriNum = self._CommGetData(trcode, "", rqname, 0, "원주문번호")
+            tradeType = self._CommGetData(trcode, "", rqname, 0, "매매구분")
+            self.opt10076Output.loc[i] = [company, orderType, orderAmount, signedAmount, orderPrice, signedPrice,
+                                          '정정/취소', orderNum, oriNum, tradeType, '대출일', '접수구분']
     def _opw00007(self, rqname, trcode):
         data = {}
         nData = int(self._CommGetData(trcode, "", rqname, 0, "출력건수"))
@@ -419,91 +525,100 @@ class Kiwoom(QAxWidget):
                                         "주문가격": orderPrice, "현재가": nowPrice, "원주문번호": oriOrderNum,
                                         "시간": orderTime}
     def _opt10004(self, rqname, trcode):    # 주식호가요청
-        sell6RemainRatio = self._CommGetData(trcode, "", rqname, 0, "매도6차선잔량대비")
-        sell6Remain      = self._CommGetData(trcode, "", rqname, 0, "매도6우선잔량")
-        sell6Quote       = self._CommGetData(trcode, "", rqname, 0, "매도6차선호가")
-        sell5RemainRatio = self._CommGetData(trcode, "", rqname, 0, "매도5차선잔량대비")
-        sell5Remain      = self._CommGetData(trcode, "", rqname, 0, "매도5차선잔량")
-        sell5Quote       = self._CommGetData(trcode, "", rqname, 0, "매도5차선호가")
-        sell4RemainRatio = self._CommGetData(trcode, "", rqname, 0, "매도4차선잔량대비")
-        sell4Remain      = self._CommGetData(trcode, "", rqname, 0, "매도4차선잔량")
-        sell4Quote       = self._CommGetData(trcode, "", rqname, 0, "매도4차선호가")
-        sell3RemainRatio = self._CommGetData(trcode, "", rqname, 0, "매도3차선잔량대비")
-        sell3Remain      = self._CommGetData(trcode, "", rqname, 0, "매도3차선잔량")
-        sell3Quote       = self._CommGetData(trcode, "", rqname, 0, "매도3차선호가")
-        sell2RemainRatio = self._CommGetData(trcode, "", rqname, 0, "매도2차선잔량대비")
-        sell2Remain      = self._CommGetData(trcode, "", rqname, 0, "매도2차선잔량")
-        sell2Quote       = self._CommGetData(trcode, "", rqname, 0, "매도2차선호가")
-        sell1RemainRatio = self._CommGetData(trcode, "", rqname, 0, "매도1차선잔량대비")
-        sell1Remain      = self._CommGetData(trcode, "", rqname, 0, "매도최우선잔량")
-        sell1Quote       = self._CommGetData(trcode, "", rqname, 0, "매도최우선호가")
+        # sell6RemainRatio = abs(int(self._CommGetData(trcode, "", rqname, 0, "매도6차선잔량대비")))
+        sell6Remain      = abs(int(self._CommGetData(trcode, "", rqname, 0, "매도6우선잔량")))
+        sell6Quote       = abs(int(self._CommGetData(trcode, "", rqname, 0, "매도6차선호가")))
+        # sell5RemainRatio = abs(int(self._CommGetData(trcode, "", rqname, 0, "매도5차선잔량대비")))
+        sell5Remain      = abs(int(self._CommGetData(trcode, "", rqname, 0, "매도5차선잔량")))
+        sell5Quote       = abs(int(self._CommGetData(trcode, "", rqname, 0, "매도5차선호가")))
+        # sell4RemainRatio = abs(int(self._CommGetData(trcode, "", rqname, 0, "매도4차선잔량대비")))
+        sell4Remain      = abs(int(self._CommGetData(trcode, "", rqname, 0, "매도4차선잔량")))
+        sell4Quote       = abs(int(self._CommGetData(trcode, "", rqname, 0, "매도4차선호가")))
+        # sell3RemainRatio = abs(int(self._CommGetData(trcode, "", rqname, 0, "매도3차선잔량대비")))
+        sell3Remain      = abs(int(self._CommGetData(trcode, "", rqname, 0, "매도3차선잔량")))
+        sell3Quote       = abs(int(self._CommGetData(trcode, "", rqname, 0, "매도3차선호가")))
+        # sell2RemainRatio = abs(int(self._CommGetData(trcode, "", rqname, 0, "매도2차선잔량대비")))
+        sell2Remain      = abs(int(self._CommGetData(trcode, "", rqname, 0, "매도2차선잔량")))
+        sell2Quote       = abs(int(self._CommGetData(trcode, "", rqname, 0, "매도2차선호가")))
+        # sell1RemainRatio = abs(int(self._CommGetData(trcode, "", rqname, 0, "매도1차선잔량대비")))
+        sell1Remain      = abs(int(self._CommGetData(trcode, "", rqname, 0, "매도최우선잔량")))
+        sell1Quote       = abs(int(self._CommGetData(trcode, "", rqname, 0, "매도최우선호가")))
 
-        buy1Quote        = self._CommGetData(trcode, "", rqname, 0, "매수최우선호가")
-        buy1Remain       = self._CommGetData(trcode, "", rqname, 0, "매수최우선잔량")
-        buy1RemainRatio  = self._CommGetData(trcode, "", rqname, 0, "매수1차선잔량대비")
-        buy2Quote        = self._CommGetData(trcode, "", rqname, 0, "매수2차선호가")
-        buy2Remain       = self._CommGetData(trcode, "", rqname, 0, "매수2차선잔량")
-        buy2RemainRatio  = self._CommGetData(trcode, "", rqname, 0, "매수2차선잔량대비")
-        buy3Quote        = self._CommGetData(trcode, "", rqname, 0, "매수3차선호가")
-        buy3Remain       = self._CommGetData(trcode, "", rqname, 0, "매수3차선잔량")
-        buy3RemainRatio  = self._CommGetData(trcode, "", rqname, 0, "매수3차선잔량대비")
-        buy4Quote        = self._CommGetData(trcode, "", rqname, 0, "매수4차선호가")
-        buy4Remain       = self._CommGetData(trcode, "", rqname, 0, "매수4차선잔량")
-        buy4RemainRatio  = self._CommGetData(trcode, "", rqname, 0, "매수4차선잔량대비")
-        buy5Quote        = self._CommGetData(trcode, "", rqname, 0, "매수5차선호가")
-        buy5Remain       = self._CommGetData(trcode, "", rqname, 0, "매수5차선잔량")
-        buy5RemainRatio  = self._CommGetData(trcode, "", rqname, 0, "매수5차선잔량대비")
-        buy6Quote        = self._CommGetData(trcode, "", rqname, 0, "매수6우선호가")
-        buy6Remain       = self._CommGetData(trcode, "", rqname, 0, "매수6우선잔량")
-        buy6RemainRatio  = self._CommGetData(trcode, "", rqname, 0, "매수6차선잔량대비")
+        buy1Quote        = abs(int(self._CommGetData(trcode, "", rqname, 0, "매수최우선호가")))
+        buy1Remain       = abs(int(self._CommGetData(trcode, "", rqname, 0, "매수최우선잔량")))
+        # buy1RemainRatio  = abs(int(self._CommGetData(trcode, "", rqname, 0, "매수1차선잔량대비")))
+        buy2Quote        = abs(int(self._CommGetData(trcode, "", rqname, 0, "매수2차선호가")))
+        buy2Remain       = abs(int(self._CommGetData(trcode, "", rqname, 0, "매수2차선잔량")))
+        # buy2RemainRatio  = abs(int(self._CommGetData(trcode, "", rqname, 0, "매수2차선잔량대비")))
+        buy3Quote        = abs(int(self._CommGetData(trcode, "", rqname, 0, "매수3차선호가")))
+        buy3Remain       = abs(int(self._CommGetData(trcode, "", rqname, 0, "매수3차선잔량")))
+        # buy3RemainRatio  = abs(int(self._CommGetData(trcode, "", rqname, 0, "매수3차선잔량대비")))
+        buy4Quote        = abs(int(self._CommGetData(trcode, "", rqname, 0, "매수4차선호가")))
+        buy4Remain       = abs(int(self._CommGetData(trcode, "", rqname, 0, "매수4차선잔량")))
+        # buy4RemainRatio  = abs(int(self._CommGetData(trcode, "", rqname, 0, "매수4차선잔량대비")))
+        buy5Quote        = abs(int(self._CommGetData(trcode, "", rqname, 0, "매수5차선호가")))
+        buy5Remain       = abs(int(self._CommGetData(trcode, "", rqname, 0, "매수5차선잔량")))
+        # buy5RemainRatio  = abs(int(self._CommGetData(trcode, "", rqname, 0, "매수5차선잔량대비")))
+        buy6Quote        = abs(int(self._CommGetData(trcode, "", rqname, 0, "매수6우선호가")))
+        buy6Remain       = abs(int(self._CommGetData(trcode, "", rqname, 0, "매수6우선잔량")))
+        # buy6RemainRatio  = abs(int(self._CommGetData(trcode, "", rqname, 0, "매수6차선잔량대비")))
+
+        totalSellUnsigned = abs(int(self._CommGetData(trcode, "", rqname, 0, "총매도잔량")))
+        totalBuyUnsigned = abs(int(self._CommGetData(trcode, "", rqname, 0, "총매수잔량")))
 
     def _opt10001(self, rqname, trcode):
-        code = self._CommGetData(trcode, "", rqname, 0, "종목코드")
-        name = self._CommGetData(trcode, "", rqname, 0, "종목명")
-        accMonth = self._CommGetData(trcode, "", rqname, 0, "결산월")
-        faceValue = self._CommGetData(trcode, "", rqname, 0, "액면가")
-        capital = self._CommGetData(trcode, "", rqname, 0, "자본금")
-        listedStock = self._CommGetData(trcode, "", rqname, 0, "상장주식")
-        creditRatio = self._CommGetData(trcode, "", rqname, 0, "신용비율")
-        annaulHighest = self._CommGetData(trcode, "", rqname, 0, "연중최고")
-        annaulLowest = self._CommGetData(trcode, "", rqname, 0, "연중최저")
-        aggValue = self._CommGetData(trcode, "", rqname, 0, "시가총액")
-        aggValueRatio = self._CommGetData(trcode, "", rqname, 0, "시가총액비중")
-        foreRatio = self._CommGetData(trcode, "", rqname, 0, "외인소진율")
-        subPrice = self._CommGetData(trcode, "", rqname, 0, "대용가")
-        per = self._CommGetData(trcode, "", rqname, 0, "PER")
-        eps = self._CommGetData(trcode, "", rqname, 0, "EPS")
-        roe = self._CommGetData(trcode, "", rqname, 0, "ROE")
-        pbr = self._CommGetData(trcode, "", rqname, 0, "PBR")
-        ev = self._CommGetData(trcode, "", rqname, 0, "EV")
-        bps = self._CommGetData(trcode, "", rqname, 0, "BPS")
-        revenue = self._CommGetData(trcode, "", rqname, 0, "매출액")
-        operIncome = self._CommGetData(trcode, "", rqname, 0, "영업이익")
-        netIncome = self._CommGetData(trcode, "", rqname, 0, "당기순이익")
-        highest250 = self._CommGetData(trcode, "", rqname, 0, "250최고")
-        lowest250 = self._CommGetData(trcode, "", rqname, 0, "250최저")
-        openPrice = self._CommGetData(trcode, "", rqname, 0, "시가")
-        highPrice = self._CommGetData(trcode, "", rqname, 0, "고가")
-        lowPrice = self._CommGetData(trcode, "", rqname, 0, "저가")
-        upLimitPrice = self._CommGetData(trcode, "", rqname, 0, "상한가")
-        downLimitPrice = self._CommGetData(trcode, "", rqname, 0, "하한가")
-        standPrice = self._CommGetData(trcode, "", rqname, 0, "기준가")
-        expTradePrice = self._CommGetData(trcode, "", rqname, 0, "예상체결가")
-        expTradeNum = self._CommGetData(trcode, "", rqname, 0, "예상체결수량")
-        highest250Day = self._CommGetData(trcode, "", rqname, 0, "250최고가일")
-        highest250Ratio = self._CommGetData(trcode, "", rqname, 0, "250최고가대비율")
-        lowest250Day = self._CommGetData(trcode, "", rqname, 0, "250최저가일")
-        lowest250Ratio = self._CommGetData(trcode, "", rqname, 0, "250최저가대비율")
-        nowPrice = self._CommGetData(trcode, "", rqname, 0, "현재가")
-        contSign = self._CommGetData(trcode, "", rqname, 0, "대비기호")
-        dayToDay = self._CommGetData(trcode, "", rqname, 0, "전일대비")
-        fluctRate = self._CommGetData(trcode, "", rqname, 0, "등락율")
-        volume = self._CommGetData(trcode, "", rqname, 0, "거래량")
-        transRatio = self._CommGetData(trcode, "", rqname, 0, "거래대비")
-        faceValueUnit = self._CommGetData(trcode, "", rqname, 0, "액면가단위")
-        circStock = self._CommGetData(trcode, "", rqname, 0, "유통주식")
-        circRatio = self._CommGetData(trcode, "", rqname, 0, "유통비율")
+        self.opt10075Output = {}
+        code            = self._CommGetData(trcode, "", rqname, 0, "종목코드")
+        name            = self._CommGetData(trcode, "", rqname, 0, "종목명")
+        # accMonth = self._CommGetData(trcode, "", rqname, 0, "결산월")
+        # faceValue = self._CommGetData(trcode, "", rqname, 0, "액면가")
+        # capital = self._CommGetData(trcode, "", rqname, 0, "자본금")
+        # listedStock = self._CommGetData(trcode, "", rqname, 0, "상장주식")
+        # creditRatio = self._CommGetData(trcode, "", rqname, 0, "신용비율")
+        annaulHighest   = int(self._CommGetData(trcode, "", rqname, 0, "연중최고"))
+        annaulLowest    = int(self._CommGetData(trcode, "", rqname, 0, "연중최저"))
+        aggValue        = int(self._CommGetData(trcode, "", rqname, 0, "시가총액"))
+        # aggValueRatio = self._CommGetData(trcode, "", rqname, 0, "시가총액비중")
+        # foreRatio = self._CommGetData(trcode, "", rqname, 0, "외인소진율")
+        # subPrice = self._CommGetData(trcode, "", rqname, 0, "대용가")
+        per             = float(self._CommGetData(trcode, "", rqname, 0, "PER"))
+        eps             = float(self._CommGetData(trcode, "", rqname, 0, "EPS"))
+        roe             = float(self._CommGetData(trcode, "", rqname, 0, "ROE"))
+        pbr             = float(self._CommGetData(trcode, "", rqname, 0, "PBR"))
+        ev              = float(self._CommGetData(trcode, "", rqname, 0, "EV"))
+        bps             = float(self._CommGetData(trcode, "", rqname, 0, "BPS"))
+        revenue         = int(self._CommGetData(trcode, "", rqname, 0, "매출액"))
+        operIncome      = int(self._CommGetData(trcode, "", rqname, 0, "영업이익"))
+        netIncome       = int(self._CommGetData(trcode, "", rqname, 0, "당기순이익"))
+        # highest250 = self._CommGetData(trcode, "", rqname, 0, "250최고")
+        # lowest250 = self._CommGetData(trcode, "", rqname, 0, "250최저")
+        openPrice       = int(self._CommGetData(trcode, "", rqname, 0, "시가"))
+        highPrice       = int(self._CommGetData(trcode, "", rqname, 0, "고가"))
+        lowPrice        = int(self._CommGetData(trcode, "", rqname, 0, "저가"))
+        # upLimitPrice = self._CommGetData(trcode, "", rqname, 0, "상한가")
+        # downLimitPrice = self._CommGetData(trcode, "", rqname, 0, "하한가")
+        standPrice      = int(self._CommGetData(trcode, "", rqname, 0, "기준가"))
+        expTradePrice   = int(self._CommGetData(trcode, "", rqname, 0, "예상체결가"))
+        expTradeNum     = int(self._CommGetData(trcode, "", rqname, 0, "예상체결수량"))
+        # highest250Day = self._CommGetData(trcode, "", rqname, 0, "250최고가일")
+        # highest250Ratio = self._CommGetData(trcode, "", rqname, 0, "250최고가대비율")
+        # lowest250Day = self._CommGetData(trcode, "", rqname, 0, "250최저가일")
+        # lowest250Ratio = self._CommGetData(trcode, "", rqname, 0, "250최저가대비율")
+        nowPrice        = int(self._CommGetData(trcode, "", rqname, 0, "현재가"))
+        contSign        = int(self._CommGetData(trcode, "", rqname, 0, "대비기호"))
+        dayToDay        = int(self._CommGetData(trcode, "", rqname, 0, "전일대비"))
+        fluctRate       = float(self._CommGetData(trcode, "", rqname, 0, "등락율"))
+        volume          = int(self._CommGetData(trcode, "", rqname, 0, "거래량"))
+        # transRatio = self._CommGetData(trcode, "", rqname, 0, "거래대비")
+        # faceValueUnit = self._CommGetData(trcode, "", rqname, 0, "액면가단위")
+        # circStock = self._CommGetData(trcode, "", rqname, 0, "유통주식")
+        # circRatio = self._CommGetData(trcode, "", rqname, 0, "유통비율")
 
+        self.opt10075Output = {'종목코드': code,'종목명': name, '연중최고': annaulHighest, '연중최저': annaulLowest,
+                             '시가총액': aggValue, 'PER': per, 'EPS': eps, 'ROE': roe, 'PBR': pbr, 'EV': ev, 'BPS': bps,
+                             '매출액': revenue, '영업이익': operIncome, '당기순이익': netIncome, '시가': openPrice, '고가': highPrice,
+                             '저가': lowPrice, '기준가': standPrice, '영업이예상체결가익': expTradePrice, '예상체결수량': expTradeNum,
+                             '현재가': nowPrice, '대비기호': contSign, '전일대비': dayToDay, '등락율': fluctRate, '거래량': volume}
     def _tickMinPrice(self, rqname, trcode):    # 틱/분요청
         self.ohlcv = {'date': [], 'open': [], 'high': [], 'low': [], 'close': [], 'volume': []}
         data_cnt = self._GetRepeatCnt(trcode, rqname)
@@ -533,7 +648,7 @@ class Kiwoom(QAxWidget):
             close = self._CommGetData(trcode, "", rqname, i, "현재가")
             volume = self._CommGetData(trcode, "", rqname, i, "거래량")
 
-            self.ohlcv['date'].append(datetime.datetime.strptime(date, '%Y%m%d'))
+            self.ohlcv['date'].append(datetime.datetime.strptime(date, '%Y%m%d').replace(hour=9))
             self.ohlcv['open'].append(int(open))
             self.ohlcv['high'].append(int(high))
             self.ohlcv['low'].append(int(low))

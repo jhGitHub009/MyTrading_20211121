@@ -49,10 +49,14 @@ class Kiwoom_Handler(QAxWidget):
     def GetCompanyInfo(self, code):
         self.kiwoom._SetInputValue("종목코드", code)
         self.kiwoom._CommRqData("opt10001_req", "opt10001", "0", "2000")
+        self.company = self.kiwoom.opt10075Output
     # 호가정보  opt10004
     def GetAskingPrice(self, code):
+        # self.kiwoom._SetInputValue("종목코드", code)
+        # self.kiwoom._CommRqData("opt10004_req", "opt10004", "0", "2000")
         self.kiwoom._SetInputValue("종목코드", code)
-        self.kiwoom._CommRqData("opt10004_req", "opt10004", "0", "2000")
+        self.kiwoom._CommRqData("opt10007_req", "opt10007", "0", "2000")
+        self.callInfo = self.kiwoom.opt10007Output
     # 차트정보 일봉 주봉 월봉, 년봉, 틱봉, 분봉, 초봉
     def GetTickPrice(self,code,range,requestType):
         self.price['DataType'] = 'tick'
@@ -137,8 +141,8 @@ class Kiwoom_Handler(QAxWidget):
         self.kiwoom._SetInputValue("주문번호", "")
         self.kiwoom._SetInputValue("체결구분", 0)
 
-        self.kiwoom._CommRqData("opt00076_req", "opt00076", "0", "2000")
-
+        self.kiwoom._CommRqData("opt10076_req", "opt10076", "0", "2000")
+        print()
         # self.kiwoom._SetInputValue("주문일자", "20220111")
         # self.kiwoom._SetInputValue("계좌번호", accNumber)
         # self.kiwoom._SetInputValue("비밀번호", passward)
@@ -298,13 +302,13 @@ class Kiwoom_Handler(QAxWidget):
         # sOrgOrderNo  // 원주문번호. 신규주문에는 공백 입력, 정정/취소시 입력합니다.
         # acc_no, order_type, code, quantity, price, hoga, order_no
         self.lastTrade['sellInfo'] = sellInfo
-        account = self.lastTrade['buyInfo']['account']
-        nOrderType = self.lastTrade['buyInfo']['nOrderType']
-        sCode = self.lastTrade['buyInfo']['sCode']
-        nQty = self.lastTrade['buyInfo']['nQty']
-        nPrice = self.lastTrade['buyInfo']['nPrice']
-        sHogaGb = self.lastTrade['buyInfo']['sHogaGb']
-        sOrgOrderNo = self.lastTrade['buyInfo']['sOrgOrderNo']
+        account = self.lastTrade['sellInfo']['account']
+        nOrderType = self.lastTrade['sellInfo']['nOrderType']
+        sCode = self.lastTrade['sellInfo']['sCode']
+        nQty = self.lastTrade['sellInfo']['nQty']
+        nPrice = self.lastTrade['sellInfo']['nPrice']
+        sHogaGb = self.lastTrade['sellInfo']['sHogaGb']
+        sOrgOrderNo = self.lastTrade['sellInfo']['sOrgOrderNo']
         self.kiwoom._SendOrder("send_order_req", '0101', account, nOrderType, sCode, nQty, nPrice, sHogaGb, sOrgOrderNo)
 if __name__ == '__main__':
     app = QApplication(sys.argv)
