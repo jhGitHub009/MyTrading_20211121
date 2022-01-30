@@ -16,6 +16,7 @@ import logging
 from Log.LogStringHandler import LogStringHandler
 from Security_Company.Kiwoom_Handle import Kiwoom_Handler
 import finplot as fplt
+import Quanti.OECD_CLI as OECD
 
 fplt.candle_bull_color = "#FF0000"
 fplt.candle_bull_body_color = "#FF0000"
@@ -34,6 +35,7 @@ class MyWindow(QMainWindow, form_class):
         self.watch.start(1000)
         self.watch.timeout.connect(self.UpdateWatch)
 
+        # 키움 API
         self.kiwoom_Handler = Kiwoom_Handler()
         self.kiwoom_Handler.Login()
         self.kiwoom_Handler.GetUserINFO()
@@ -74,6 +76,63 @@ class MyWindow(QMainWindow, form_class):
         self.cBoxMarketPriceTab_2.stateChanged.connect(lambda :self.CheckMaketPriceInTrade('Sell'))
         self.pBtnCurPriceTab_2.clicked.connect(lambda :self.BtnCurPriceTab('Sell'))
         self.pBtnSellInTrade.clicked.connect(self.SellStock)
+
+        self.pBtnNoSignedInTrade.clicked.connect(self.NonTrade)
+        self.tbNoSigned.doubleClicked.connect(self.ClickedItemInNoSigned)
+
+        # OECD CLI
+        self.btnOECDCLIDate.clicked.connect(self.OECDCLIDate)
+        self.btnOECDCLIData.clicked.connect(self.OECDCLIData)
+    def OECDCLIDate(self):
+        saveFolder = r'./Quanti/OECD/ReleaseDate'
+        today = datetime.date.today()
+        dateOECDCLI = OECD.GetCLIDate()
+        if not os.path.isdir(saveFolder): os.makedirs(saveFolder)
+        dateOECDCLI.to_csv(saveFolder + r'/date_OECD_CLI_%s.csv' % (today), encoding='cp949', index=False)
+        self._DataframeToTableWidget(_qTable=self.tbWOECDDate, _dfData=dateOECDCLI)
+    def OECDCLIData(self):
+        saveFolder = r'./Quanti/OECD/Data/'
+        today = datetime.date.today()
+        # 데이터다운 받고
+        # OECD.GetCLIData()
+        newFileName = 'OECD_CLI_%s.csv' % (today)
+        # 파일 옮기고
+        if not isdir(saveFolder): makedirs(saveFolder)
+        OECD.MoveFile(saveFolder, '.csv', newFileName)
+        import pandas as pd
+        cliOECD = pd.read_csv(saveFolder+'/'+newFileName)
+        cliOECDJPN = cliOECD[cliOECD['LOCATION']=='JPN']
+        # self.gviewOECDChart.plot(cliOECD[cliOECD['LOCATION'] == 'JPN']['Value'].tolist())
+        import matplotlib.pyplot as plt
+        from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
+        self.fig = plt.Figure()
+        self.canvas = FigureCanvas(self.fig)
+        self.verlayOECDChart.addWidget(self.canvas)
+        self.fig.clear()
+        ax = self.fig.add_subplot(111)
+        x = cliOECDJPN['TIME'].tolist()[-10:]
+        y1 = cliOECDJPN['Value'].tolist()[-10:]
+        ax.plot(x, y1)
+        self.canvas.draw()
+        # self.gviewOECDChart.plot(cliOECD[cliOECD['LOCATION']=='JPN'].index,cliOECD[cliOECD['LOCATION']=='JPN']['Value'])
+    def OECDCLIResult(self):
+        today = datetime.date.today()
+        saveFolder = './Quanti/%s' % (today.strftime('%Y-%m-%d'))
+        saveFilename = 'OECDCLI_%s.csv' % (today.strftime('%Y%m%d'))
+        # 계산하고
+        df_summery = OECD.CLIResult2(today)
+        # df_summery = OECD.CLIResult(today)
+        # 파일 만들어서 트레이딩 준비 완료
+        if not isdir(saveFolder): makedirs(saveFolder)
+        df_summery.to_csv(saveFolder + '/' + saveFilename, encoding='cp949', index=False)
+        print('Finish OECDCLIResult!!')
+    def ClickedItemInNoSigned(self):
+        selectedText = self.tbNoSigned.currentItem().text().replace(',', '')
+        if not selectedText.isdigit():
+            return True
+        else:
+            self.sBoxPriceTab_1.setValue(int(selectedText))
+            self.sBoxPriceTab_2.setValue(int(selectedText))
     def ClickedItemInAccTable(self):
         selectedRow = self.tbAccDetail.currentRow()
         accuntInfo = {}
@@ -141,7 +200,7 @@ class MyWindow(QMainWindow, form_class):
                 self.laPriceRateInTrade.setStyleSheet("Color : black")
             self.laPriceInTrade.setText(str(abs(self.kiwoom_Handler.company['현재가'])))
             self.laPriceCompareInTrade.setText(str(self.kiwoom_Handler.company['전일대비']))
-            self.laPriceRateInTrade.setText(str(self.kiwoom_Handler.company['등락율']).zfill(2))
+            self.laPriceRateInTrade.setText('%s %%'%(str(self.kiwoom_Handler.company['등락율']).zfill(2)))
             self.sBoxPriceTab_1.setValue(abs(self.kiwoom_Handler.company['현재가']))
             self.sBoxPriceTab_2.setValue(abs(self.kiwoom_Handler.company['현재가']))
     def ClickedItemInTable(self):
