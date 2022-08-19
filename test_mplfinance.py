@@ -139,11 +139,12 @@
 # fplt.show()
 
 from PyQt5.QtWidgets import *
-
+import yfinance
 import sys
 import finplot as fplt
 import pyupbit
-
+import datetime
+from Security_Company.Kiwoom_Handle import Kiwoom_Handler
 fplt.candle_bull_color = "#FF0000"
 fplt.candle_bull_body_color = "#FF0000"
 fplt.candle_bear_color = "#0000FF"
@@ -159,14 +160,32 @@ class MyWindow(QGraphicsView):
         self.setLayout(layout)
         self.resize(800, 300)
 
+        self.kiwoom_Handler = Kiwoom_Handler()
+        self.kiwoom_Handler.Login()
+        self.kiwoom_Handler.GetUserINFO()
+
+        code='000660'
+        date = datetime.datetime.today()
+        date = date.strftime('%Y%m%d')
+        self.kiwoom_Handler.GetDayPrice(code, date, requestType=0)
+        price = self.kiwoom_Handler.price
         # ax
-        ax = fplt.create_plot(init_zoom_periods=10)
+        ax = fplt.create_plot(init_zoom_periods=2)
         # self.axs = [ax] # finplot requres this property
         layout.addWidget(ax.vb.win, 0)
 
         df = pyupbit.get_ohlcv("KRW-BTC")
         df.rename(columns={'open': "Open", "high": "High", "low": "Low", "close":"Close"}, inplace=True)
-        fplt.candlestick_ochl(df[['Open', 'Close', 'High', 'Low']])
+
+        price['Price'].rename(columns={'open': "Open", "high": "High", "low": "Low", "close": "Close"}, inplace=True)
+        # fplt.candlestick_ochl(price['Price'][['Time','Open', 'Close', 'High', 'Low']].iloc[0:4])
+        fplt.candlestick_ochl(price['Price'].iloc[::-1][['Open', 'Close', 'High', 'Low']])
+        # fplt.candlestick_ochl(price['Price'][['Open', 'Close', 'High', 'Low']].iloc[0:200])
+        df = yfinance.download('AAPL')
+        # fplt.candlestick_ochl(df[['Open', 'Close', 'High', 'Low']].iloc[0:200])
+        # fplt.show()
+
+        # fplt.candlestick_ochl(df[['Open', 'Close', 'High', 'Low']])
         fplt.show(qt_exec=False)
 
 

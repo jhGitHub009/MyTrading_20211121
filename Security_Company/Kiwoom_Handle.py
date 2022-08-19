@@ -49,13 +49,14 @@ class Kiwoom_Handler(QAxWidget):
     def GetCompanyInfo(self, code):
         self.kiwoom._SetInputValue("종목코드", code)
         self.kiwoom._CommRqData("opt10001_req", "opt10001", "0", "2000")
+        self.company = self.kiwoom.opt10075Output
     # 호가정보  opt10004
     def GetAskingPrice(self, code):
         # self.kiwoom._SetInputValue("종목코드", code)
         # self.kiwoom._CommRqData("opt10004_req", "opt10004", "0", "2000")
         self.kiwoom._SetInputValue("종목코드", code)
         self.kiwoom._CommRqData("opt10007_req", "opt10007", "0", "2000")
-        print()
+        self.callInfo = self.kiwoom.opt10007Output
     # 차트정보 일봉 주봉 월봉, 년봉, 틱봉, 분봉, 초봉
     def GetTickPrice(self,code,range,requestType):
         self.price['DataType'] = 'tick'
@@ -140,8 +141,7 @@ class Kiwoom_Handler(QAxWidget):
         self.kiwoom._SetInputValue("주문번호", "")
         self.kiwoom._SetInputValue("체결구분", 0)
 
-        self.kiwoom._CommRqData("opt00076_req", "opt00076", "0", "2000")
-
+        self.kiwoom._CommRqData("opt10076_req", "opt10076", "0", "2000")
         # self.kiwoom._SetInputValue("주문일자", "20220111")
         # self.kiwoom._SetInputValue("계좌번호", accNumber)
         # self.kiwoom._SetInputValue("비밀번호", passward)
@@ -175,9 +175,28 @@ class Kiwoom_Handler(QAxWidget):
 
         self.kiwoom._CommRqData("opw00007_req", "opw00007", "0", "2000")
         self.accInfo[accNumber]['orderHist'] = self.kiwoom.opw00007Output
+    def GetTradeHist(self, accNumber, passward, startDay, endDay, tradeType, code, currency):
+        tradeTypeInfo = {'전체': 0, '입출금': 1, '입출고': 2, '매매': 3, '매수': 4,'매도': 5, '입금': 6, '출금': 7,
+                         '예탁담보대출입금': 'A', '환전':'F'}
+        self.kiwoom._SetInputValue("계좌번호", accNumber)
+        self.kiwoom._SetInputValue("비밀번호", passward)
+        self.kiwoom._SetInputValue("시작일자", startDay)
+        self.kiwoom._SetInputValue("종료일자", endDay)
+        self.kiwoom._SetInputValue("구분", tradeTypeInfo[tradeType])
+        self.kiwoom._SetInputValue("종목코드", code)
+        self.kiwoom._SetInputValue("통화코드", currency)
+        self.kiwoom._SetInputValue("상품구분", '0')
+        self.kiwoom._SetInputValue("비밀번호입력매체구분", '00')
+        self.kiwoom._SetInputValue("고객정보제한여부", 'N')
+        self.kiwoom._CommRqData("opw00015_req", "opw00015", "0", "2000")
+        time.sleep(0.5)
+        self.accInfo[accNumber]['TradeHist'] = self.kiwoom.opw00015Output['dfTrade']
+        # if accNumber == self.kiwoom.opw00015Output['AccNum'].replace('-', '').split(' ')[0]:
+        #     self.accInfo[accNumber]['TradeHist'] = self.kiwoom.opw00015Output['dfTrade']
+        # else:
+        #     self.accInfo[accNumber]['TradeHist'] = None
     def _GetStockPrice(self, chartType, code, range, requestType=0):
         # dataframe.
-
         chartType = chartType.lower()
         if chartType=='tick' or chartType=='min':    # 틱차트, 분봉차트
             self.kiwoom._SetInputValue("종목코드", code)              # 종목코드 = 전문 조회할 종목코드
@@ -220,8 +239,12 @@ class Kiwoom_Handler(QAxWidget):
         elif chartType == 'indexyear':
             trNumber = 'opt20019'
         self.kiwoom._CommRqData("%s_req"%(trNumber), trNumber, 0, "2000")
-        dfPrice = pd.DataFrame(self.kiwoom.ohlcv, columns=['open', 'high', 'low', 'close', 'volume'],
-                               index=self.kiwoom.ohlcv['date'])
+        # dfPrice = pd.DataFrame(self.kiwoom.ohlcv, columns=['open', 'high', 'low', 'close', 'volume'],
+        #                        index=self.kiwoom.ohlcv['date'])
+        dfPrice = pd.DataFrame(self.kiwoom.ohlcv)
+        dfPrice.columns = [colName.capitalize() for colName in dfPrice.columns]
+        dfPrice.set_index('Date', inplace=True)
+        dfPrice.sort_index(inplace=True)
         return dfPrice
     # 증거금율
     def GetMarignRate(self):
@@ -273,7 +296,7 @@ class Kiwoom_Handler(QAxWidget):
         account = self.lastTrade['buyInfo']['account']
         # account 가 있어야 된다.
         nOrderType = self.lastTrade['buyInfo']['nOrderType']
-        # 1번 3번 5번 중하나.
+        # 1:신규매수, 2:신규매도 3:매수취소, 4:매도취소, 5:매수정정, 6:매도정정
         sCode = self.lastTrade['buyInfo']['sCode']
         # company조회 가능
         nQty = self.lastTrade['buyInfo']['nQty']
@@ -301,13 +324,13 @@ class Kiwoom_Handler(QAxWidget):
         # sOrgOrderNo  // 원주문번호. 신규주문에는 공백 입력, 정정/취소시 입력합니다.
         # acc_no, order_type, code, quantity, price, hoga, order_no
         self.lastTrade['sellInfo'] = sellInfo
-        account = self.lastTrade['buyInfo']['account']
-        nOrderType = self.lastTrade['buyInfo']['nOrderType']
-        sCode = self.lastTrade['buyInfo']['sCode']
-        nQty = self.lastTrade['buyInfo']['nQty']
-        nPrice = self.lastTrade['buyInfo']['nPrice']
-        sHogaGb = self.lastTrade['buyInfo']['sHogaGb']
-        sOrgOrderNo = self.lastTrade['buyInfo']['sOrgOrderNo']
+        account = self.lastTrade['sellInfo']['account']
+        nOrderType = self.lastTrade['sellInfo']['nOrderType']
+        sCode = self.lastTrade['sellInfo']['sCode']
+        nQty = self.lastTrade['sellInfo']['nQty']
+        nPrice = self.lastTrade['sellInfo']['nPrice']
+        sHogaGb = self.lastTrade['sellInfo']['sHogaGb']
+        sOrgOrderNo = self.lastTrade['sellInfo']['sOrgOrderNo']
         self.kiwoom._SendOrder("send_order_req", '0101', account, nOrderType, sCode, nQty, nPrice, sHogaGb, sOrgOrderNo)
 if __name__ == '__main__':
     app = QApplication(sys.argv)
