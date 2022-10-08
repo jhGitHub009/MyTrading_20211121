@@ -6,6 +6,7 @@
       <excludeFolder url="file://$MODULE_DIR$/Infomation/Naver" />
       <excludeFolder url="file://$MODULE_DIR$/Infomation/StockCode" />
       <excludeFolder url="file://$MODULE_DIR$/Infomation/Stock_data" />
+      <excludeFolder url="file://$MODULE_DIR$/Quanti/AvgMoM" />
       <excludeFolder url="file://$MODULE_DIR$/Quanti/Bollinger_test" />
       <excludeFolder url="file://$MODULE_DIR$/Quanti/Log" />
       <excludeFolder url="file://$MODULE_DIR$/Quanti/OECD" />
@@ -19,7 +20,7 @@
       <excludeFolder url="file://$MODULE_DIR$/Quanti/Value" />
     </content>
     <content url="file://$MODULE_DIR$/Infomation/Stock_data/20220219" />
-    <orderEntry type="jdk" jdkName="Python 3.7.1 virtualenv at D:\Stock\Stock_20210818\MyStockVenv_x86" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.8 (base)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">

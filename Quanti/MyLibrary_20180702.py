@@ -154,3 +154,50 @@ def MoveFile(src,dst,fileKeyword,newFileName):
 def GetMissedCode(srcList,dstList):
     missedCode = [items for items in srcList if not items in dstList]
     return missedCode
+def ChangeFormat(stock_folder,code):
+    stockfiles = [f for f in listdir(stock_folder) if isfile(join(stock_folder, f))]  # folder내 파일name list
+    stockfile = [filename for filename in stockfiles if code in filename]
+    if len(stockfile) != 1:
+        return False
+    df_stock = pd.read_csv(stock_folder + '/' + stockfile[0],  engine='python')
+    korToEng = {'날짜':'Date','종가':'Price','오픈':'Open','고가':'High','저가':'Low','거래량':'Vol.','변동 %':'Change %'}
+    for colName in df_stock.columns:
+        if colName in korToEng.keys():
+            df_stock.rename(columns={colName: korToEng[colName]}, inplace=True)
+    if 'Change %' in df_stock.columns:
+        df_stock = df_stock.drop(df_stock.columns[-1], axis=1) # change(%) drop
+    if 'Vol.' in df_stock.columns:
+        df_stock = df_stock.drop(df_stock.columns[-1], axis=1) # volumn drop
+    df_stock.drop_duplicates(subset=['Date'], keep='first', inplace=True)
+    df_stock['Date'] = pd.to_datetime(df_stock['Date'])
+    # df_stock['Date'] = pd.to_datetime(arg=df_stock['Date'], format='%Y년 %m월 %d일')
+    df_stock.sort_values(by='Date', ascending=True, inplace=True)
+    df_stock.set_index(keys='Date', inplace=True)
+    for colName in df_stock.columns:
+        # df_stock[colName] = pd.to_numeric(df_stock[colName], errors='coerce')
+        if type(df_stock[colName][0])==str:
+            df_stock[colName] = df_stock[colName].str.replace(',', '').astype(float)
+    df_stock.rename(columns={'Price': 'Close'}, inplace=True)
+    df_stock.to_csv(stock_folder+'/'+stockfile[0], encoding='cp949')
+    return df_stock
+def MakePeriodData2(dfDailyData):
+    startDay = dfDailyData.index[0]
+    endDay = dfDailyData.index[-1]
+    monthlyFirstDay = pd.date_range(start=startDay, end=endDay, freq='MS')
+    monthlyFirstDay = monthlyFirstDay.tolist()
+    monthlyFirstDay.insert(0,startDay)
+    monthlyLastDay = pd.date_range(start=startDay, end=endDay, freq='M')
+    monthlyLastDay = monthlyLastDay.tolist()
+    monthlyLastDay.append(endDay)
+    dfPeriod = pd.DataFrame(columns=dfDailyData.columns)
+    dfPeriod = dfPeriod[['Open','Close','High','Low']]
+    for (thisPeriodStart, thisPeriodEnd) in zip(monthlyFirstDay,monthlyLastDay):
+        dfTemp = dfDailyData[(dfDailyData.index > thisPeriodStart) & (dfDailyData.index <= thisPeriodEnd)]
+        if dfTemp.empty:
+            continue
+        open = dfTemp.iloc[0]['Open']
+        close = dfTemp.iloc[-1]['Close']
+        high = dfTemp['High'].max()
+        low = dfTemp['Low'].min()
+        dfPeriod.loc[dfTemp.index[0]] = [open, close, high, low]
+    return dfPeriod
