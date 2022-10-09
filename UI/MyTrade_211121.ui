@@ -59,7 +59,7 @@
      <enum>QTabWidget::Triangular</enum>
     </property>
     <property name="currentIndex">
-     <number>6</number>
+     <number>3</number>
     </property>
     <property name="documentMode">
      <bool>false</bool>
@@ -788,7 +788,7 @@
        <enum>QTabWidget::North</enum>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="tab_9">
        <attribute name="title">
@@ -852,6 +852,182 @@
        <attribute name="title">
         <string>ETF(OECD)</string>
        </attribute>
+       <widget class="QGroupBox" name="gboxChart_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>480</width>
+          <height>421</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>OECD CLI Chart</string>
+        </property>
+        <widget class="QPushButton" name="pbtnInspectInOECD">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>15</y>
+           <width>120</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>조회</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_18">
+         <property name="geometry">
+          <rect>
+           <x>12</x>
+           <y>27</y>
+           <width>80</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Country</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="leCountryInOECD">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>16</y>
+           <width>131</width>
+           <height>40</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QGraphicsView" name="gviewOECDChart">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>90</y>
+           <width>461</width>
+           <height>321</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>90</y>
+           <width>461</width>
+           <height>321</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verlayOECDChart"/>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_10">
+        <property name="geometry">
+         <rect>
+          <x>510</x>
+          <y>10</y>
+          <width>361</width>
+          <height>421</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>관심종목</string>
+        </property>
+        <widget class="QTableWidget" name="tableWidget_3">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>90</y>
+           <width>321</width>
+           <height>321</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="cboxAccInTrade_2">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>20</y>
+           <width>160</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Consolas</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pbtnInspectInOECD_2">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>20</y>
+           <width>120</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>추가</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="gBoxOECD">
+        <property name="geometry">
+         <rect>
+          <x>890</x>
+          <y>10</y>
+          <width>271</width>
+          <height>421</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>OECD CLI</string>
+        </property>
+        <widget class="QTableWidget" name="tbWOECDDate">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>90</y>
+           <width>241</width>
+           <height>321</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btnOECDCLIDate">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>20</y>
+           <width>110</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>OECD Date</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btnOECDCLIData">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>20</y>
+           <width>110</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>OECD Data</string>
+         </property>
+        </widget>
+       </widget>
       </widget>
       <widget class="QWidget" name="tab_6">
        <attribute name="title">
@@ -872,14 +1048,14 @@
     </widget>
     <widget class="QWidget" name="tab_15">
      <attribute name="title">
-      <string>키움_API</string>
+      <string>하나_API</string>
      </attribute>
     </widget>
     <widget class="QWidget" name="tab_16">
      <attribute name="title">
-      <string>하나_API</string>
+      <string>키움_API</string>
      </attribute>
-     <widget class="QGroupBox" name="groupBox_11">
+     <widget class="QGroupBox" name="gboxChart">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -891,26 +1067,6 @@
       <property name="title">
        <string>차트</string>
       </property>
-      <widget class="QGraphicsView" name="graphicsView">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>90</y>
-         <width>461</width>
-         <height>260</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QGraphicsView" name="graphicsView_2">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>352</y>
-         <width>461</width>
-         <height>60</height>
-        </rect>
-       </property>
-      </widget>
       <widget class="QComboBox" name="cboxDayInChart">
        <property name="geometry">
         <rect>
@@ -1147,6 +1303,27 @@
         </rect>
        </property>
       </widget>
+      <widget class="QGraphicsView" name="gviewChart">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>461</width>
+         <height>321</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>461</width>
+         <height>321</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="vlayChart"/>
+      </widget>
      </widget>
      <widget class="QGroupBox" name="gboxAccManage">
       <property name="geometry">
@@ -1170,7 +1347,7 @@
         </rect>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>2</number>
        </property>
        <widget class="QWidget" name="accountTab1">
         <attribute name="title">
@@ -1765,7 +1942,7 @@
        </property>
       </widget>
      </widget>
-     <widget class="QGroupBox" name="groupBox_13">
+     <widget class="QGroupBox" name="gboxCallingPrice">
       <property name="geometry">
        <rect>
         <x>500</x>
@@ -1777,7 +1954,7 @@
       <property name="title">
        <string>현재가</string>
       </property>
-      <widget class="QTableWidget" name="tableWidget_8">
+      <widget class="QTableWidget" name="twCallingPrice">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -1797,7 +1974,7 @@
        </attribute>
        <row/>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_5">
+      <widget class="QLineEdit" name="leCompanyCallingPrice">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -1810,7 +1987,7 @@
         <string notr="true">background-color: rgb(175, 255, 255);</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_6">
+      <widget class="QLineEdit" name="leCodeCallingPrice">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -1820,7 +1997,7 @@
         </rect>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_11">
+      <widget class="QPushButton" name="pbtnInspectInCallingPrice">
        <property name="geometry">
         <rect>
          <x>210</x>
@@ -1834,7 +2011,7 @@
        </property>
       </widget>
      </widget>
-     <widget class="QGroupBox" name="groupBox_14">
+     <widget class="QGroupBox" name="gboxTrade">
       <property name="geometry">
        <rect>
         <x>860</x>
@@ -1846,12 +2023,12 @@
       <property name="title">
        <string>매매</string>
       </property>
-      <widget class="QLineEdit" name="lineEdit_8">
+      <widget class="QLineEdit" name="leCompanyInTrade">
        <property name="geometry">
         <rect>
          <x>20</x>
          <y>50</y>
-         <width>140</width>
+         <width>110</width>
          <height>30</height>
         </rect>
        </property>
@@ -1859,35 +2036,22 @@
         <string notr="true">background-color: rgb(175, 255, 255);</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_12">
-       <property name="geometry">
-        <rect>
-         <x>180</x>
-         <y>30</y>
-         <width>120</width>
-         <height>40</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>조회</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_7">
+      <widget class="QLineEdit" name="leCodeInTrade">
        <property name="geometry">
         <rect>
          <x>20</x>
          <y>20</y>
-         <width>140</width>
+         <width>70</width>
          <height>30</height>
         </rect>
        </property>
       </widget>
-      <widget class="QComboBox" name="comboBox_13">
+      <widget class="QComboBox" name="cboxAccInTrade">
        <property name="geometry">
         <rect>
-         <x>20</x>
+         <x>10</x>
          <y>90</y>
-         <width>121</width>
+         <width>160</width>
          <height>30</height>
         </rect>
        </property>
@@ -1899,50 +2063,18 @@
          <bold>true</bold>
         </font>
        </property>
-       <item>
-        <property name="text">
-         <string/>
-        </property>
-       </item>
-      </widget>
-      <widget class="QTextEdit" name="textEdit_4">
-       <property name="geometry">
-        <rect>
-         <x>150</x>
-         <y>90</y>
-         <width>150</width>
-         <height>30</height>
-        </rect>
-       </property>
-       <property name="lineWidth">
-        <number>0</number>
-       </property>
-       <property name="verticalScrollBarPolicy">
-        <enum>Qt::ScrollBarAlwaysOff</enum>
-       </property>
-       <property name="horizontalScrollBarPolicy">
-        <enum>Qt::ScrollBarAlwaysOff</enum>
-       </property>
-       <property name="html">
-        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Arial'; font-size:11pt; font-weight:600; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;비빌번호 입력&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
       </widget>
       <widget class="QTabWidget" name="tabWidget_5">
        <property name="geometry">
         <rect>
          <x>9</x>
-         <y>143</y>
+         <y>129</y>
          <width>310</width>
-         <height>271</height>
+         <height>281</height>
         </rect>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>2</number>
        </property>
        <widget class="QWidget" name="tab_21">
         <attribute name="title">
@@ -1968,7 +2100,7 @@ p, li { white-space: pre-wrap; }
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>80</y>
+           <y>100</y>
            <width>60</width>
            <height>30</height>
           </rect>
@@ -1984,7 +2116,7 @@ p, li { white-space: pre-wrap; }
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>120</y>
+           <y>140</y>
            <width>60</width>
            <height>30</height>
           </rect>
@@ -1996,11 +2128,11 @@ p, li { white-space: pre-wrap; }
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_13">
+        <widget class="QPushButton" name="pBtnBuyInTrade">
          <property name="geometry">
           <rect>
-           <x>20</x>
-           <y>200</y>
+           <x>10</x>
+           <y>210</y>
            <width>120</width>
            <height>30</height>
           </rect>
@@ -2009,31 +2141,37 @@ p, li { white-space: pre-wrap; }
           <string>현금매수</string>
          </property>
         </widget>
-        <widget class="QSpinBox" name="spinBox_3">
+        <widget class="QSpinBox" name="sBoxAmountTab_1">
          <property name="geometry">
           <rect>
            <x>70</x>
-           <y>80</y>
+           <y>100</y>
            <width>90</width>
            <height>30</height>
           </rect>
          </property>
         </widget>
-        <widget class="QSpinBox" name="spinBox_4">
+        <widget class="QSpinBox" name="sBoxPriceTab_1">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="geometry">
           <rect>
            <x>70</x>
-           <y>120</y>
+           <y>140</y>
            <width>90</width>
            <height>30</height>
           </rect>
          </property>
+         <property name="maximum">
+          <number>999999999</number>
+         </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_14">
+        <widget class="QPushButton" name="pBtnCurPriceTab_1">
          <property name="geometry">
           <rect>
-           <x>166</x>
-           <y>153</y>
+           <x>170</x>
+           <y>175</y>
            <width>122</width>
            <height>30</height>
           </rect>
@@ -2042,11 +2180,11 @@ p, li { white-space: pre-wrap; }
           <string>현재가</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_15">
+        <widget class="QPushButton" name="pBtnTotalTab_1">
          <property name="geometry">
           <rect>
            <x>230</x>
-           <y>80</y>
+           <y>100</y>
            <width>60</width>
            <height>30</height>
           </rect>
@@ -2062,7 +2200,7 @@ p, li { white-space: pre-wrap; }
           <string>가능</string>
          </property>
         </widget>
-        <widget class="QCheckBox" name="checkBox_2">
+        <widget class="QCheckBox" name="cBoxLoanTab_1">
          <property name="geometry">
           <rect>
            <x>240</x>
@@ -2080,7 +2218,7 @@ p, li { white-space: pre-wrap; }
           <string>미수</string>
          </property>
         </widget>
-        <widget class="QComboBox" name="comboBox_14">
+        <widget class="QComboBox" name="cBoxKindStockTab_1">
          <property name="geometry">
           <rect>
            <x>60</x>
@@ -2163,47 +2301,11 @@ p, li { white-space: pre-wrap; }
           </property>
          </item>
         </widget>
-        <widget class="QPushButton" name="pushButton_16">
-         <property name="geometry">
-          <rect>
-           <x>190</x>
-           <y>19</y>
-           <width>51</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>현금</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_17">
-         <property name="geometry">
-          <rect>
-           <x>240</x>
-           <y>19</y>
-           <width>51</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>신용</string>
-         </property>
-        </widget>
-        <widget class="QComboBox" name="comboBox_15">
+        <widget class="QComboBox" name="cBoxPerTab_1">
          <property name="geometry">
           <rect>
            <x>166</x>
-           <y>80</y>
+           <y>100</y>
            <width>60</width>
            <height>30</height>
           </rect>
@@ -2272,11 +2374,11 @@ p, li { white-space: pre-wrap; }
           </property>
          </item>
         </widget>
-        <widget class="QCheckBox" name="checkBox_3">
+        <widget class="QCheckBox" name="cBoxMarketPriceTab_1">
          <property name="geometry">
           <rect>
            <x>230</x>
-           <y>120</y>
+           <y>140</y>
            <width>70</width>
            <height>30</height>
           </rect>
@@ -2290,11 +2392,11 @@ p, li { white-space: pre-wrap; }
           <string>시장가</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_18">
+        <widget class="QPushButton" name="pBtnCallingTab_1">
          <property name="geometry">
           <rect>
            <x>166</x>
-           <y>120</y>
+           <y>140</y>
            <width>60</width>
            <height>30</height>
           </rect>
@@ -2310,16 +2412,45 @@ p, li { white-space: pre-wrap; }
           <string>호가</string>
          </property>
         </widget>
+        <widget class="QRadioButton" name="rBtnCashTab_1">
+         <property name="geometry">
+          <rect>
+           <x>187</x>
+           <y>20</y>
+           <width>60</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>현금</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="rBtnCreditTab_1">
+         <property name="geometry">
+          <rect>
+           <x>243</x>
+           <y>20</y>
+           <width>60</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>신용</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QWidget" name="tab_22">
         <attribute name="title">
          <string>매도</string>
         </attribute>
-        <widget class="QPushButton" name="pushButton_19">
+        <widget class="QPushButton" name="pBtnSellInTrade">
          <property name="geometry">
           <rect>
-           <x>28</x>
-           <y>191</y>
+           <x>10</x>
+           <y>210</y>
            <width>120</width>
            <height>30</height>
           </rect>
@@ -2328,29 +2459,11 @@ p, li { white-space: pre-wrap; }
           <string>현금매도</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_20">
-         <property name="geometry">
-          <rect>
-           <x>248</x>
-           <y>10</y>
-           <width>51</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>신용</string>
-         </property>
-        </widget>
         <widget class="QLabel" name="label_11">
          <property name="geometry">
           <rect>
-           <x>8</x>
-           <y>78</y>
+           <x>0</x>
+           <y>100</y>
            <width>60</width>
            <height>30</height>
           </rect>
@@ -2362,11 +2475,11 @@ p, li { white-space: pre-wrap; }
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_21">
+        <widget class="QPushButton" name="pBtnCallingTab_2">
          <property name="geometry">
           <rect>
-           <x>174</x>
-           <y>118</y>
+           <x>166</x>
+           <y>140</y>
            <width>60</width>
            <height>30</height>
           </rect>
@@ -2382,11 +2495,11 @@ p, li { white-space: pre-wrap; }
           <string>호가</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_22">
+        <widget class="QPushButton" name="pBtnCurPriceTab_2">
          <property name="geometry">
           <rect>
-           <x>174</x>
-           <y>151</y>
+           <x>170</x>
+           <y>175</y>
            <width>122</width>
            <height>30</height>
           </rect>
@@ -2395,11 +2508,11 @@ p, li { white-space: pre-wrap; }
           <string>현재가</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_23">
+        <widget class="QPushButton" name="pBtnTotalTab_2">
          <property name="geometry">
           <rect>
-           <x>238</x>
-           <y>78</y>
+           <x>230</x>
+           <y>100</y>
            <width>60</width>
            <height>30</height>
           </rect>
@@ -2415,11 +2528,11 @@ p, li { white-space: pre-wrap; }
           <string>가능</string>
          </property>
         </widget>
-        <widget class="QCheckBox" name="checkBox_5">
+        <widget class="QCheckBox" name="cBoxMarketPriceTab_2">
          <property name="geometry">
           <rect>
-           <x>238</x>
-           <y>118</y>
+           <x>230</x>
+           <y>140</y>
            <width>70</width>
            <height>30</height>
           </rect>
@@ -2436,8 +2549,8 @@ p, li { white-space: pre-wrap; }
         <widget class="QLabel" name="label_12">
          <property name="geometry">
           <rect>
-           <x>8</x>
-           <y>11</y>
+           <x>0</x>
+           <y>20</y>
            <width>60</width>
            <height>30</height>
           </rect>
@@ -2449,11 +2562,11 @@ p, li { white-space: pre-wrap; }
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QComboBox" name="comboBox_16">
+        <widget class="QComboBox" name="cBoxKindStockTab_2">
          <property name="geometry">
           <rect>
-           <x>68</x>
-           <y>11</y>
+           <x>60</x>
+           <y>20</y>
            <width>121</width>
            <height>30</height>
           </rect>
@@ -2535,8 +2648,8 @@ p, li { white-space: pre-wrap; }
         <widget class="QLabel" name="label_14">
          <property name="geometry">
           <rect>
-           <x>8</x>
-           <y>118</y>
+           <x>0</x>
+           <y>140</y>
            <width>60</width>
            <height>30</height>
           </rect>
@@ -2548,49 +2661,34 @@ p, li { white-space: pre-wrap; }
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QSpinBox" name="spinBox_5">
+        <widget class="QSpinBox" name="sBoxAmountTab_2">
          <property name="geometry">
           <rect>
-           <x>78</x>
-           <y>78</y>
+           <x>70</x>
+           <y>100</y>
            <width>90</width>
            <height>30</height>
           </rect>
          </property>
         </widget>
-        <widget class="QSpinBox" name="spinBox_6">
+        <widget class="QSpinBox" name="sBoxPriceTab_2">
          <property name="geometry">
           <rect>
-           <x>78</x>
-           <y>118</y>
+           <x>70</x>
+           <y>140</y>
            <width>90</width>
            <height>30</height>
           </rect>
          </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_24">
-         <property name="geometry">
-          <rect>
-           <x>198</x>
-           <y>10</y>
-           <width>51</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>현금</string>
+         <property name="maximum">
+          <number>999999999</number>
          </property>
         </widget>
-        <widget class="QComboBox" name="comboBox_17">
+        <widget class="QComboBox" name="cBoxPerTab_2">
          <property name="geometry">
           <rect>
-           <x>174</x>
-           <y>78</y>
+           <x>166</x>
+           <y>100</y>
            <width>60</width>
            <height>30</height>
           </rect>
@@ -2659,11 +2757,11 @@ p, li { white-space: pre-wrap; }
           </property>
          </item>
         </widget>
-        <widget class="QPushButton" name="pushButton_25">
+        <widget class="QPushButton" name="pBtnAccountInTrade">
          <property name="geometry">
           <rect>
-           <x>248</x>
-           <y>41</y>
+           <x>240</x>
+           <y>50</y>
            <width>51</width>
            <height>31</height>
           </rect>
@@ -2677,6 +2775,35 @@ p, li { white-space: pre-wrap; }
           <string>잔고</string>
          </property>
         </widget>
+        <widget class="QRadioButton" name="rBtnCashTab_2">
+         <property name="geometry">
+          <rect>
+           <x>187</x>
+           <y>20</y>
+           <width>60</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>현금</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="rBtnCreditTab_2">
+         <property name="geometry">
+          <rect>
+           <x>243</x>
+           <y>20</y>
+           <width>60</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>신용</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QWidget" name="tab_23">
         <attribute name="title">
@@ -2686,7 +2813,7 @@ p, li { white-space: pre-wrap; }
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>102</y>
+           <y>100</y>
            <width>60</width>
            <height>30</height>
           </rect>
@@ -2698,27 +2825,27 @@ p, li { white-space: pre-wrap; }
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QSpinBox" name="spinBox_8">
+        <widget class="QSpinBox" name="sBoxAmountTab_3">
          <property name="geometry">
           <rect>
            <x>70</x>
-           <y>102</y>
+           <y>100</y>
            <width>90</width>
            <height>30</height>
           </rect>
          </property>
         </widget>
-        <widget class="QSpinBox" name="spinBox_9">
+        <widget class="QSpinBox" name="sBoxPriceTab_3">
          <property name="geometry">
           <rect>
            <x>70</x>
-           <y>142</y>
+           <y>140</y>
            <width>90</width>
            <height>30</height>
           </rect>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_29">
+        <widget class="QPushButton" name="pBtnNoSignedInTrade">
          <property name="geometry">
           <rect>
            <x>220</x>
@@ -2752,11 +2879,11 @@ p, li { white-space: pre-wrap; }
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QComboBox" name="comboBox_19">
+        <widget class="QComboBox" name="cBoxPerTab_3">
          <property name="geometry">
           <rect>
            <x>166</x>
-           <y>102</y>
+           <y>100</y>
            <width>60</width>
            <height>30</height>
           </rect>
@@ -2838,11 +2965,11 @@ p, li { white-space: pre-wrap; }
           <string>정정</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_31">
+        <widget class="QPushButton" name="pBtnCallingTab_3">
          <property name="geometry">
           <rect>
            <x>166</x>
-           <y>142</y>
+           <y>140</y>
            <width>60</width>
            <height>30</height>
           </rect>
@@ -2858,11 +2985,11 @@ p, li { white-space: pre-wrap; }
           <string>호가</string>
          </property>
         </widget>
-        <widget class="QCheckBox" name="checkBox_6">
+        <widget class="QCheckBox" name="cBoxMarketPriceTab_3">
          <property name="geometry">
           <rect>
            <x>230</x>
-           <y>142</y>
+           <y>140</y>
            <width>70</width>
            <height>30</height>
           </rect>
@@ -2880,7 +3007,7 @@ p, li { white-space: pre-wrap; }
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>142</y>
+           <y>140</y>
            <width>60</width>
            <height>30</height>
           </rect>
@@ -2892,10 +3019,10 @@ p, li { white-space: pre-wrap; }
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_34">
+        <widget class="QPushButton" name="pBtnCurPriceTab_3">
          <property name="geometry">
           <rect>
-           <x>166</x>
+           <x>170</x>
            <y>175</y>
            <width>122</width>
            <height>30</height>
@@ -2918,11 +3045,11 @@ p, li { white-space: pre-wrap; }
           <string notr="true">background-color: rgb(175, 255, 255);</string>
          </property>
         </widget>
-        <widget class="QCheckBox" name="checkBox_7">
+        <widget class="QCheckBox" name="pBtnTotalTab_3">
          <property name="geometry">
           <rect>
            <x>230</x>
-           <y>102</y>
+           <y>100</y>
            <width>70</width>
            <height>30</height>
           </rect>
@@ -2970,6 +3097,58 @@ p, li { white-space: pre-wrap; }
          </property>
         </widget>
        </widget>
+      </widget>
+      <widget class="QLineEdit" name="leditPWInTrade">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>90</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="laPriceInTrade">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>20</y>
+         <width>150</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>현재가</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="laPriceCompareInTrade">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>50</y>
+         <width>70</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>등락</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="laPriceRateInTrade">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>50</y>
+         <width>70</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>등락율</string>
+       </property>
       </widget>
      </widget>
     </widget>
