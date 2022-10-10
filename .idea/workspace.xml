@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d78072d7-5e4c-4063-99ff-d2cdffbaa87e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/InvestingData.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OECD_MDD_Backtesting_Numba.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OECD_MDD_Backtesting_Ray.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quanti/AvgMom_Theshold.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quanti/OECDAfterMDD_Backtesting.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quanti/OECD_MDD_Backtesting.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quanti/OECD_Portion_Backtesting.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quanti/OECD_Value_Backtesting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MyTrading_20211121.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MyTrading_20211121.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/numba_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quanti/CorrelationAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/Quanti/CorrelationAnalysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quanti/MyLibrary_20180702.py" beforeDir="false" afterPath="$PROJECT_DIR$/Quanti/MyLibrary_20180702.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
